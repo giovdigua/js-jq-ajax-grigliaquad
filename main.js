@@ -1,6 +1,6 @@
 $(document).ready( function () {
 
-   //  var square = '<span class="cell"></span>';
+     var square = '<span class="cell"></span>';
    //  var squareCheck = '<span class="cell check"></span>';
    //  var array = [];
    //  function randomNumber(min,max) {
@@ -18,23 +18,33 @@ $(document).ready( function () {
    //  console.log(array);
    //
    //
-   //  for (var i = 0; i < 36; i++) {
-   //      if (array.includes(i)) {
-   //          $('.container').append(squareCheck);
-   //      } else {
-   //          $('.container').append(square);
-   //      }
-   //
-   //  }
+    for (var i = 0; i < 36; i++) {
+        $('.container').append(square);
+    }
    //
    //
    //
-   //  $('.cell').click(function () {
-   //      if ($(this).hasClass('check')) {
-   //          $(this).addClass('red');
-   //      } else {
-   //          $(this).addClass('green');
-   //      }
-   //  });
+
+   $('.cell').click(function () {
+       var that = $(this)
+       $.ajax({
+           url :'https://flynn.boolean.careers/exercises/api/random/int',
+           method : 'GET',
+           success : function (data) {
+               var number = data.response;
+               console.log(number);
+               $('#result').text(number);
+               if (number > 5) {
+                   that.addClass('green');
+               } else {
+                   that.addClass('blue');
+               }
+
+           },
+           error : function () {
+
+          }
+      });
+  });
 
 });

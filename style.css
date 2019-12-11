@@ -3,29 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
 
+}
 .container{
+    margin: auto;
+    position: relative;
     width: 300px;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: lightgrey;
+    background-color: rgba(0, 0, 0, 0.2);;
 
 }
 
 .cell{
     width:50px;
     height: 50px;
-     border: 1px solid black;
+     border: 1px solid rgba(0, 0, 0, 0.5);;
      cursor: pointer;
 }
 
-.red{
-    background-color: red;
+.blue{
+    background-color: rgba(15, 10, 249,0.5);
 }
 
 .green{
-    background-color: green;
+    background-color: rgba(117, 221, 45,0.5);
+}
+
+#result{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: -1;
+    font-size: 290px;
+    color:
 }
