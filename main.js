@@ -42,9 +42,30 @@ $(document).ready( function () {
 
            },
            error : function () {
-
+                console.log('error');
           }
       });
   });
+  //  $('.cell').click(function () {
+  //      var that = $(this)
+  //      $.ajax({
+  //          url :'https://flynn.boolean.careers/exercises/api/random/int',
+  //          method : 'GET',
+  //          success : function (data) {
+  //              var number = data.response;
+  //              console.log(number);
+  //              $('#result').text(number);
+  //              if (number > 5) {
+  //                  that.addClass('green');
+  //              } else {
+  //                  that.addClass('blue');
+  //              }
+  //
+  //          },
+  //          error : function () {
+  //
+  //         }
+  //     });
+  // });
 
 });
