@@ -31,6 +31,8 @@ $(document).ready( function () {
            url :'https://flynn.boolean.careers/exercises/api/random/int',
            method : 'GET',
            success : function (data) {
+               that.removeClass('green');
+               that.removeClass('blue');
                var number = data.response;
                console.log(number);
                $('#result').text(number);
